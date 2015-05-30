@@ -26,6 +26,7 @@ function newsletter_user_default_permissions() {
     'roles' => array(
       'Content Manager' => 'Content Manager',
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
     ),
     'module' => 'node',
   );
@@ -44,6 +45,7 @@ function newsletter_user_default_permissions() {
     'name' => 'create newsletter content',
     'roles' => array(
       'Content Manager' => 'Content Manager',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -51,14 +53,18 @@ function newsletter_user_default_permissions() {
   // Exported permission: 'delete any newsletter content'.
   $permissions['delete any newsletter content'] = array(
     'name' => 'delete any newsletter content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own newsletter content'.
   $permissions['delete own newsletter content'] = array(
     'name' => 'delete own newsletter content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -67,6 +73,7 @@ function newsletter_user_default_permissions() {
     'name' => 'edit any newsletter content',
     'roles' => array(
       'Content Manager' => 'Content Manager',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -76,6 +83,7 @@ function newsletter_user_default_permissions() {
     'name' => 'edit own newsletter content',
     'roles' => array(
       'Content Manager' => 'Content Manager',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
