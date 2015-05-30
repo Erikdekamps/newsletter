@@ -1,0 +1,38 @@
+; Packaging information for automated_newsletters
+name = "Automated newsletters"
+description = "Automatically install the newsletter feature and theme."
+exclusive = "1"
+core = "7.x"
+; ----------
+; Dependencies
+; ----------
+; Administration
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
+; Core
+dependencies[] = block
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = image
+dependencies[] = list
+dependencies[] = node
+dependencies[] = options
+dependencies[] = system
+dependencies[] = text
+dependencies[] = update
+dependencies[] = user
+; Development
+dependencies[] = profiler_builder
+; Other
+dependencies[] = entity
+; Paragraphs
+dependencies[] = paragraphs
+; User interface
+dependencies[] = ckeditor
+; Features
+dependencies[] = features
+dependencies[] = newsletter
+

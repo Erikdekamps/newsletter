@@ -1,0 +1,17 @@
+; automated_newsletters make file for local development
+core = "7.x"
+api = "2"
+
+projects[drupal][version] = "7.x"
+; include the d.o. profile base
+includes[] = "drupal-org.make"
+
+; +++++ Libraries +++++
+
+; automated_newsletters
+libraries[automated_newsletters][directory_name] = "automated_newsletters"
+libraries[automated_newsletters][type] = "profile"
+libraries[automated_newsletters][destination] = "../../profiles"
+libraries[automated_newsletters][download][type] = "get"
+libraries[automated_newsletters][download][url] = "http://ftp.drupal.org/files/projects/automated_newsletters-7.x-1.x-dev.tar.gz"
+
