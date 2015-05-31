@@ -1,10 +1,12 @@
-<table width="600" align="center" cellpadding="0" cellspacing="0" bgcolor="#dcdcdc">
+<table width="600" align="center" cellpadding="0" cellspacing="0"
+       bgcolor="#dcdcdc" id="newsletter-content">
   <tr bgcolor="#ffffff">
     <td colspan="3" height="25" style="font-size: 0px; line-height: 0px;"></td>
   </tr>
   <tr bgcolor="#ffffff">
     <td colspan="3" height="39" style="font-size: 0px; line-height: 0px;"></td>
   </tr>
+
   <?php print render($content); ?>
 
   <tr>

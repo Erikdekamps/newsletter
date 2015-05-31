@@ -1,4 +1,3 @@
-<!--Two images wrapper-->
 <tr>
   <td colspan="3">
     <table width="600" align="center" cellpadding="0" cellspacing="0">
@@ -19,11 +18,17 @@
                   <tbody>
                   <tr>
                     <td width="250">
-                      <?php print render($content['field_shared_image_left']); ?>
+                      <?php print theme('image', array(
+                        'path' => $variables['content']['field_shared_image_left']['#items'][0]['uri']
+                      )); ?>
+                      <?php //print render($content['field_shared_image_left']); ?>
                     </td>
                     <td width="25"></td>
                     <td width="250">
-                      <?php print render($content['field_shared_image_right']); ?>
+                      <?php print theme('image', array(
+                        'path' => $variables['content']['field_shared_image_right']['#items'][0]['uri']
+                      )); ?>
+                      <?php //print render($content['field_shared_image_right']); ?>
                     </td>
                   </tr>
                   </tbody>

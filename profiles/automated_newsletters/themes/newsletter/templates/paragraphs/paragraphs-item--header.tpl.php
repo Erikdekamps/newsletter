@@ -1,4 +1,3 @@
-<!--Header wrapper-->
 <tr>
   <td colspan="3" height="23"></td>
 </tr>
@@ -19,7 +18,8 @@
         <td height="16" bgcolor="#ffffff">
               <span
                 style="color: #000001; font-size: 25px; line-height:40px; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">
-              <?php print render($content['field_shared_title']); ?>
+                <?php print ($variables['content']['field_shared_title']['#items'][0]['value']); ?>
+              <?php //print render($content['field_shared_title']); ?>
               </span>
         </td>
         <td width="16" height="16" bgcolor="#ffffff"></td>

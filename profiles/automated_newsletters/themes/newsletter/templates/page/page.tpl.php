@@ -38,6 +38,9 @@
           <div class="section">
 
             <?php if ($tabs) : print render($tabs); endif; ?>
+
+            <textarea id="newsletter-html" style="width:595px;height:200px;"></textarea>
+
             <?php print render($page['content']); ?>
           </div>
         </div>

@@ -1,4 +1,3 @@
-<!--Image left wrapper-->
 <tr>
   <td colspan="3">
     <table width="600" align="center" cellpadding="0" cellspacing="0">
@@ -31,7 +30,8 @@
               <tr>
                 <td>
                   <b style="font-size: 16px; line-height: 26px; font-family: Arial, Helvetica, sans-serif; ">
-                    <?php print render($content['field_shared_title']); ?>
+                    <?php print ($variables['content']['field_shared_title']['#items'][0]['value']); ?>
+                    <?php //print render($content['field_shared_title']); ?>
                   </b>
                 </td>
               </tr>
@@ -41,7 +41,8 @@
             <?php endif; ?>
             <tr>
               <td style="color: #000001; font-size: 12px; line-height: 23px; font-weight: normal; font-family: Arial, Helvetica, sans-serif;">
-                <?php print render($content['field_shared_text']); ?>
+                <?php print $variables['content']['field_shared_text']['#items'][0]['value']; ?>
+                <?php //print render($content['field_shared_text']); ?>
               </td>
             </tr>
             </tbody></table>

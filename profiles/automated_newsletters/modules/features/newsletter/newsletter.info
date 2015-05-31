@@ -54,6 +54,7 @@ features[paragraphs][] = regular
 features[paragraphs][] = two_images
 features[user_permission][] = access administration menu
 features[user_permission][] = access content
+features[user_permission][] = access content overview
 features[user_permission][] = administer nodes
 features[user_permission][] = create newsletter content
 features[user_permission][] = delete any newsletter content

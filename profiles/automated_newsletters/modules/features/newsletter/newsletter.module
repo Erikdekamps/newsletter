@@ -5,3 +5,12 @@
  */
 
 include_once 'newsletter.features.inc';
+
+/**
+ * Implements hook_init().
+ */
+function newsletter_init() {
+  drupal_add_js(drupal_get_path('module', 'newsletter') .'/js/newsletter.js');
+  drupal_add_css(drupal_get_path('module', 'newsletter') .'/css/newsletter
+  .css');
+}
