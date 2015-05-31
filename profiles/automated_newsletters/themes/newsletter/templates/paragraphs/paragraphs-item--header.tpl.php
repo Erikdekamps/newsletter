@@ -16,11 +16,7 @@
         <td width="14" height="16"></td>
         <td width="16" height="16" bgcolor="#ffffff"></td>
         <td height="16" bgcolor="#ffffff">
-              <span
-                style="color: #000001; font-size: 25px; line-height:40px; font-weight: bold; font-family: Arial, Helvetica, sans-serif;">
-                <?php print ($variables['content']['field_shared_title']['#items'][0]['value']); ?>
-              <?php //print render($content['field_shared_title']); ?>
-              </span>
+          <span style="color: #000001; font-size: 25px; line-height:40px; font-weight: bold; font-family: Arial, Helvetica, sans-serif;"><?php print $title; ?></span>
         </td>
         <td width="16" height="16" bgcolor="#ffffff"></td>
         <td width="14" height="16"></td>
@@ -36,8 +32,4 @@
     </table>
   </td>
 </tr>
-<?php if ($content['field_shared_bottom_border']['#items'][0]['value'] == 1): ?>
-  <tr>
-    <td colspan="3" height="23"></td>
-  </tr>
-<?php endif; ?>
+<?php print isset($border) ? $border : ''; ?>

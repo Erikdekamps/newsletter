@@ -18,17 +18,11 @@
                   <tbody>
                   <tr>
                     <td width="250">
-                      <?php print theme('image', array(
-                        'path' => $variables['content']['field_shared_image_left']['#items'][0]['uri']
-                      )); ?>
-                      <?php //print render($content['field_shared_image_left']); ?>
+                      <?php print isset($left_image) ? $left_image : ''; ?>
                     </td>
                     <td width="25"></td>
                     <td width="250">
-                      <?php print theme('image', array(
-                        'path' => $variables['content']['field_shared_image_right']['#items'][0]['uri']
-                      )); ?>
-                      <?php //print render($content['field_shared_image_right']); ?>
+                      <?php print isset($right_image) ? $right_image : ''; ?>
                     </td>
                   </tr>
                   </tbody>
@@ -48,8 +42,4 @@
     </table>
   </td>
 </tr>
-<?php if ($content['field_shared_bottom_border']['#items'][0]['value'] == 1): ?>
-  <tr>
-    <td colspan="3" height="23"></td>
-  </tr>
-<?php endif; ?>
+<?php print isset($border) ? $border : ''; ?>
