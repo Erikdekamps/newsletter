@@ -10,17 +10,18 @@
         <td width="14"></td>
       </tr>
       <?php if (!empty($title)): ?>
-      <tr>
-        <td width="14" height="16"></td>
-        <td width="16" height="16" bgcolor="#ffffff"></td>
-        <td height="16" bgcolor="#ffffff">
-          <b style="font-size: 16px; line-height: 23px; font-family: Arial, Helvetica, sans-serif; ">
-            <?php print isset($title) ? $title : ''; ?>
-          </b>
-        </td>
-        <td width="16" height="16" bgcolor="#ffffff"></td>
-        <td width="14" height="16"></td>
-      </tr>
+        <tr>
+          <td width="14" height="16"></td>
+          <td width="16" height="16" bgcolor="#ffffff"></td>
+          <td height="16" bgcolor="#ffffff">
+            <b
+              style="font-size: 16px; line-height: 23px; font-family: Arial, Helvetica, sans-serif; ">
+              <?php print isset($title) ? $title : ''; ?>
+            </b>
+          </td>
+          <td width="16" height="16" bgcolor="#ffffff"></td>
+          <td width="14" height="16"></td>
+        </tr>
         <tr>
           <td width="14" height="16"></td>
           <td width="16" bgcolor="#ffffff"></td>
@@ -41,13 +42,23 @@
       <tr>
         <td width="14"></td>
         <td width="16" bgcolor="#ffffff"></td>
-        <td bgcolor="#ffffff" style="color: #000001; font-size: 12px; line-height: 23px; font-family: Arial, Helvetica, sans-serif;">
+        <td bgcolor="#ffffff"
+            style="color: #000001; font-size: 12px; line-height: 23px; font-family: Arial, Helvetica, sans-serif;">
           <?php print isset($text) ? $text : ''; ?>
         </td>
         <td width="16" bgcolor="#ffffff"></td>
         <td width="14"></td>
       </tr>
-      </tbody></table>
+      <tr>
+        <td width="14" height="16"></td>
+        <td width="16" bgcolor="#ffffff"></td>
+        <td bgcolor="#ffffff"></td>
+        <td width="16" bgcolor="#ffffff"></td>
+        <td width="14"></td>
+      </tr>
+      </tr>
+      </tbody>
+    </table>
   </td>
 </tr>
 <?php print isset($border) ? $border : ''; ?>
