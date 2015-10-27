@@ -25,7 +25,7 @@ function newsletter_preprocess_paragraphs_item__header(&$variables) {
   if (isset($variables['field_shared_title'])) {
     if(isset($variables['field_shared_title'][0]['safe_value'])) {
       // Set a new variable for the title.
-      $variables['title'] = $variables['field_shared_title'][0]['safe_value'];
+      $variables['title'] = newsletter_convert_characters($variables['field_shared_title'][0]['safe_value']);
     }
   }
 
@@ -45,7 +45,7 @@ function newsletter_preprocess_paragraphs_item__image_left(&$variables) {
   if (isset($variables['field_shared_title'])) {
     if(isset($variables['field_shared_title'][0]['safe_value'])) {
       // Set a new variable for the title.
-      $variables['title'] = $variables['field_shared_title'][0]['safe_value'];
+      $variables['title'] = newsletter_convert_characters($variables['field_shared_title'][0]['safe_value']);
     }
   }
 
@@ -63,7 +63,7 @@ function newsletter_preprocess_paragraphs_item__image_left(&$variables) {
 
   // Check if the text is set.
   if (isset($variables['field_shared_text'][0]['safe_value'])) {
-    $variables['text'] = $variables['field_shared_text'][0]['safe_value'];
+    $variables['text'] = newsletter_convert_characters($variables['field_shared_text'][0]['safe_value']);
   }
 
   // Check if the border is set.
@@ -82,7 +82,7 @@ function newsletter_preprocess_paragraphs_item__image_middle(&$variables) {
   if (isset($variables['field_shared_title'])) {
     if(isset($variables['field_shared_title'][0]['safe_value'])) {
       // Set a new variable for the title.
-      $variables['title'] = $variables['field_shared_title'][0]['safe_value'];
+      $variables['title'] = newsletter_convert_characters($variables['field_shared_title'][0]['safe_value']);
     }
   }
 
@@ -100,7 +100,7 @@ function newsletter_preprocess_paragraphs_item__image_middle(&$variables) {
 
   // Check if the text is set.
   if (isset($variables['field_shared_text'][0]['safe_value'])) {
-    $variables['text'] = $variables['field_shared_text'][0]['safe_value'];
+    $variables['text'] = newsletter_convert_characters($variables['field_shared_text'][0]['safe_value']);
   }
 
   // Check if the border is set.
@@ -119,7 +119,7 @@ function newsletter_preprocess_paragraphs_item__image_right(&$variables) {
   if (isset($variables['field_shared_title'])) {
     if(isset($variables['field_shared_title'][0]['safe_value'])) {
       // Set a new variable for the title.
-      $variables['title'] = $variables['field_shared_title'][0]['safe_value'];
+      $variables['title'] = newsletter_convert_characters($variables['field_shared_title'][0]['value']);
     }
   }
 
@@ -137,7 +137,7 @@ function newsletter_preprocess_paragraphs_item__image_right(&$variables) {
 
   // Check if the text is set.
   if (isset($variables['field_shared_text'][0]['safe_value'])) {
-    $variables['text'] = $variables['field_shared_text'][0]['safe_value'];
+    $variables['text'] = newsletter_convert_characters($variables['field_shared_text'][0]['safe_value']);
   }
 
   // Check if the border is set.
@@ -211,8 +211,21 @@ function newsletter_preprocess_paragraphs_item__two_images(&$variables) {
   }
 }
 
+/**
+ * Function to convert special characters.
+ *
+ * @param $string
+ *   The string of text to check.
+ *
+ * @return mixed
+ *   Returns the new string.
+ */
 function newsletter_convert_characters(&$string) {
+
+  // Characters array.
   $characters = array(
+    "…" => "...",
+    " " => "&nbsp;",
     "\"" => "&quot;",
     "'" => "&apos;",
     "“" => "&ldquo;",
@@ -283,7 +296,11 @@ function newsletter_convert_characters(&$string) {
     "ý" => "&yacute;",
     "þ" => "&thorn;",
     "ÿ" => "&yuml;",
+    "–" => "-",
+    "€" => "&euro;",
   );
 
-  return str_replace(array_keys($characters), array_values($characters), $string);
+  $output = str_replace(array_keys($characters), array_values($characters), $string);
+
+  return $output;
 }

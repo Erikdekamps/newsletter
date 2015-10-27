@@ -11,7 +11,7 @@
 
   <tr>
     <td colspan="3">
-      <img src="http://www.luciuswebsystems.nl/vvn/nieuwe_layout/vvn-footer-white.png" height="183" width="603" alt="footer afbeelding">
+      <img src="http://vvn.lucius-test.nl/layout/vvn-footer-white.png" height="183" width="603" alt="footer afbeelding">
     </td>
   </tr>
 
@@ -50,7 +50,7 @@
                       <td width="14"></td>
                       <td>
                         <a href="http://www.cbf.nl/" style="text-decoration: none; border:0px;">
-                          <img src="http://www.luciuswebsystems.nl/vvn/nieuwe_layout/cbf.png" height="38" width="27" border="0" alt="CBF" />
+                          <img src="http://vvn.lucius-test.nl/layout//cbf.png" height="38" width="27" border="0" alt="CBF" />
                         </a>
                       </td>
                     </tr>
@@ -82,13 +82,7 @@
                     <tr>
                       <td width="14"></td>
                       <td>
-                        <a href="http://vvn.nl/verkeer-op-school/basisscholen/lesmaterialen" style="font-size: 12px; line-height: 23px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;">Lesmaterialen basisschool</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td width="14"></td>
-                      <td>
-                        <a href="https://viaclick.via.nl/vvn/" style="font-size: 12px; line-height: 23px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;">Meldpunt veilig verkeer</a>
+                        <a href="http://www.meldpuntveiligverkeer.nl/" style="font-size: 12px; line-height: 23px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;">Meldpunt veilig verkeer</a>
                       </td>
                     </tr>
                     <tr>
@@ -101,25 +95,25 @@
                           <tbody><tr>
                             <td>
                               <a href="https://www.linkedin.com/company/vvn-veilig-verkeer-nederland" style="border: 0px; text-decoration: none;">
-                                <img src="http://www.luciuswebsystems.nl/vvn/nieuwe_layout/ln.png" height="21" width="20" alt="linkedin" border="0" />
+                                <img src="http://vvn.lucius-test.nl/layout//ln.png" height="21" width="20" alt="linkedin" border="0" />
                               </a>
                             </td>
                             <td width="12"></td>
                             <td>
                               <a href="https://www.facebook.com/veiligverkeernl" style="border: 0px; text-decoration: none;">
-                                <img src="http://www.luciuswebsystems.nl/vvn/nieuwe_layout/fb.png" height="21" width="10" alt="facebook" border="0" />
+                                <img src="http://vvn.lucius-test.nl/layout//fb.png" height="21" width="10" alt="facebook" border="0" />
                               </a>
                             </td>
                             <td width="12"></td>
                             <td>
                               <a href="https://twitter.com/VeiligVerkeer" style="border: 0px; text-decoration: none;">
-                                <img src="http://www.luciuswebsystems.nl/vvn/nieuwe_layout/tw.png" height="17" width="21" alt="twitter" border="0" />
+                                <img src="http://vvn.lucius-test.nl/layout//tw.png" height="17" width="21" alt="twitter" border="0" />
                               </a>
                             </td>
                             <td width="12"></td>
                             <td>
                               <a href="https://www.youtube.com/user/VeiligVerkeerNL" style="border: 0px; text-decoration: none;">
-                                <img src="http://www.luciuswebsystems.nl/vvn/nieuwe_layout/yt.png" height="15" width="21" alt="youtube" border="0" />
+                                <img src="http://vvn.lucius-test.nl/layout//yt.png" height="15" width="21" alt="youtube" border="0" />
                               </a>
                             </td>
                           </tr>
