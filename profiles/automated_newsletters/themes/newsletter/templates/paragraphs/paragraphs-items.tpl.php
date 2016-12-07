@@ -40,7 +40,7 @@
                     <tr>
                       <td width="14"></td>
                       <td width="183" style="font-size: 12px; line-height: 24px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;">
-                        Wilt u de nieuwsbrief niet meer ontvangen, dan kunt u zich <a href="&lt;!--hToken1--&gt;" style="color:#fff;">hier</a> afmelden.
+                        Wilt u de nieuwsbrief niet meer ontvangen, dan kunt u zich <a target="_blank" href="&lt;!--hToken1--&gt;" style="color:#fff;">hier</a> afmelden.
                       </td>
                     </tr>
                     <tr>
@@ -49,7 +49,7 @@
                     <tr>
                       <td width="14"></td>
                       <td>
-                        <a href="http://www.cbf.nl/" style="text-decoration: none; border:0px;">
+                        <a target="_blank" href="http://www.cbf.nl/" style="text-decoration: none; border:0px;">
                           <img src="http://vvn.lucius-test.nl/layout//cbf.png" height="38" width="27" border="0" alt="CBF" />
                         </a>
                       </td>
@@ -70,19 +70,19 @@
                     <tr>
                       <td width="14"></td>
                       <td>
-                        <a href="http://vvn.nl/help-mee/word-lid" style="font-size: 12px; line-height: 23px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;">Word lid</a>
+                        <a target="_blank" href="http://vvn.nl/help-mee/word-lid" style="font-size: 12px; line-height: 23px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;">Word lid</a>
                       </td>
                     </tr>
                     <tr>
                       <td width="14"></td>
                       <td>
-                        <a href="http://vvn.nl/help-mee/word-vrijwilliger" style="font-size: 12px; line-height: 23px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;">Word vrijwilliger</a>
+                        <a target="_blank" href="http://vvn.nl/help-mee/word-vrijwilliger" style="font-size: 12px; line-height: 23px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;">Word vrijwilliger</a>
                       </td>
                     </tr>
                     <tr>
                       <td width="14"></td>
                       <td>
-                        <a href="http://www.meldpuntveiligverkeer.nl/" style="font-size: 12px; line-height: 23px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;">Meldpunt veilig verkeer</a>
+                        <a target="_blank" href="http://www.vvn.nl/participatiepunt" style="font-size: 12px; line-height: 23px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;">VVN Participatiepunt</a>
                       </td>
                     </tr>
                     <tr>
@@ -94,25 +94,25 @@
                         <table cellpadding="0" cellspacing="0">
                           <tbody><tr>
                             <td>
-                              <a href="https://www.linkedin.com/company/vvn-veilig-verkeer-nederland" style="border: 0px; text-decoration: none;">
+                              <a target="_blank" href="https://www.linkedin.com/company/vvn-veilig-verkeer-nederland" style="border: 0px; text-decoration: none;">
                                 <img src="http://vvn.lucius-test.nl/layout//ln.png" height="21" width="20" alt="linkedin" border="0" />
                               </a>
                             </td>
                             <td width="12"></td>
                             <td>
-                              <a href="https://www.facebook.com/veiligverkeernl" style="border: 0px; text-decoration: none;">
+                              <a target="_blank" href="https://www.facebook.com/veiligverkeernl" style="border: 0px; text-decoration: none;">
                                 <img src="http://vvn.lucius-test.nl/layout//fb.png" height="21" width="10" alt="facebook" border="0" />
                               </a>
                             </td>
                             <td width="12"></td>
                             <td>
-                              <a href="https://twitter.com/VeiligVerkeer" style="border: 0px; text-decoration: none;">
+                              <a target="_blank" href="https://twitter.com/VeiligVerkeer" style="border: 0px; text-decoration: none;">
                                 <img src="http://vvn.lucius-test.nl/layout//tw.png" height="17" width="21" alt="twitter" border="0" />
                               </a>
                             </td>
                             <td width="12"></td>
                             <td>
-                              <a href="https://www.youtube.com/user/VeiligVerkeerNL" style="border: 0px; text-decoration: none;">
+                              <a target="_blank" href="https://www.youtube.com/user/VeiligVerkeerNL" style="border: 0px; text-decoration: none;">
                                 <img src="http://vvn.lucius-test.nl/layout//yt.png" height="15" width="21" alt="youtube" border="0" />
                               </a>
                             </td>
@@ -204,14 +204,14 @@
               <tr>
                 <td width="14"></td>
                 <td style="font-size: 12px; line-height: 23px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;">
-                  E <a style="font-size: 12px; line-height: 23px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;" href="mailto:info@vvn.nl">info@vvn.nl</a>
+                  E <a target="_blank" style="font-size: 12px; line-height: 23px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;" href="mailto:info@vvn.nl">info@vvn.nl</a>
                 </td>
                 <td width="14"></td>
               </tr>
               <tr>
                 <td width="14"></td>
                 <td>
-                  <a style="font-size: 12px; line-height: 25px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;" href="http://www.veiligverkeernederland.nl">www.veiligverkeernederland.nl</a>
+                  <a target="_blank" style="font-size: 12px; line-height: 25px; font-weight: normal; color: #ffffff; font-family: Arial, Helvetica, sans-serif;" href="http://www.veiligverkeernederland.nl">www.veiligverkeernederland.nl</a>
                 </td>
                 <td width="14">&nbsp;</td>
               </tr>

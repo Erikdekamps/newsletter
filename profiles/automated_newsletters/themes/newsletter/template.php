@@ -226,7 +226,7 @@ function newsletter_convert_characters(&$string) {
   $characters = array(
     "…" => "...",
     " " => "&nbsp;",
-    "\"" => "&quot;",
+    /*"\"" => "&quot;",*/
     "'" => "&apos;",
     "“" => "&ldquo;",
     "”" => "&rdquo;",
