@@ -46,14 +46,6 @@
                     <tr>
                       <td colspan="2" height="13"></td>
                     </tr>
-                    <tr>
-                      <td width="14"></td>
-                      <td>
-                        <a target="_blank" href="http://www.cbf.nl/" style="text-decoration: none; border:0px;">
-                          <img src="http://vvn.lucius-test.nl/layout//cbf.png" height="38" width="27" border="0" alt="CBF" />
-                        </a>
-                      </td>
-                    </tr>
                     </tbody></table>
                 </td>
                 <!-- column Snel naar -->
