@@ -1,0 +1,152 @@
+<?php
+/**
+ * @file This file contains awesome addon's which enhance OpenLucius
+ */
+
+/**
+ * Implements hook_menu()
+ */
+function ol_helper_menu() {
+
+  // initialze array
+  $items = array();
+
+  $items['admin/missing_modules'] = array(
+    'title' => 'missing modules',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ol_helper_module_form'),
+    'type' => MENU_NORMAL_ITEM,
+    'access arguments' => array('administer nodes')
+  );
+
+  $items['admin/info'] = array(
+    'title' => 'php info',
+    'page callback' => 'phpinfo',
+    'type' => MENU_NORMAL_ITEM,
+    'access arguments' => array('administer nodes')
+  );
+
+  return $items;
+}
+
+/**
+ * custom form for module overview, if the site is running slowly it might be searching for modules
+ */
+function ol_helper_module_form($form, &$form_state) {
+
+  // initialize array
+  $form = array(
+    '#type' => 'fieldset',
+    '#prefix' => '<legend><h2>' . t('Missing modules') . '</h2></legend>'
+  );
+
+  // build pretty heading
+  $header = array(
+    array('data' => t('Name')),
+    array('data' => t('Filename'))
+  );
+
+  // get inactive modules
+  $modules = _get_active_missing_modules();
+
+  // table body
+  $body = array();
+
+  // loop through body
+  foreach ($modules as $module => $filename) {
+
+    // add row to body
+    $body[] = array(
+      array('data' => $module),
+      array('data' => $filename)
+    );
+  }
+
+  // add table to form
+  $form['missing_modules'] = array(
+    '#markup' => theme('table', array('header' => $header, 'rows' => $body))
+  );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Disable modules')
+  );
+
+  return $form;
+}
+
+/**
+ * form submit of missing modules form
+ */
+function ol_helper_module_form_submit($form, $form_state) {
+  // get missing, as the form could be called after adding or deleting modules get a fresh list
+  $results = _get_active_missing_modules();
+
+  // disable all results in empty
+  if (!empty($results)) {
+
+    // disable modules
+    db_update('system')
+      -> fields(array('status' => 0))
+      -> condition('type', 'module')
+      -> condition('name', array_keys($results), 'IN')
+      -> execute();
+
+    // flush cashes
+    drupal_flush_all_caches();
+  }
+}
+
+/**
+ * custom function to obtain active missing modules
+ * @return array $result (keyed array containing the missing modules)
+ */
+function _get_active_missing_modules() {
+  $result = db_query("SELECT name, filename
+                      FROM {system}
+                      WHERE type = 'module'
+                      AND status = 1 
+                      ORDER BY filename") -> fetchAllKeyed();
+  // loop through results
+  foreach ($result as $module => $filename) {
+    // check if the file exists on the file system, if it does unset we don't have to disable it ;)
+    if (file_exists($filename)) {
+      unset($result[$module]);
+    }
+  }
+
+  // return missing modules
+  return $result;
+}
+
+/**
+ * Temporary Development function.
+ */
+function k() {
+  $path_to_krumo = drupal_get_path('module', 'devel') . '/krumo/class.krumo.php';
+  require_once $path_to_krumo;
+
+  $input = func_get_args();
+  foreach ($input as $data) {
+    krumo($data);
+  }
+}
+
+/**
+ * Implements hook_init().
+ */
+function ol_helper_init() {
+  if ($_SERVER['HTTP_HOST'] == 'localhost') {
+
+    // Check for google as it can take up to 5 seconds before cdn responds.
+    if(!$sock = @fsockopen('www.google.com', 80)) {
+      $path_to_module = drupal_get_path('module', 'ol_helper');
+
+      // Add minimal requirements.
+      drupal_add_css($path_to_module . '/assets/bootstrap.min.css');
+      drupal_add_css($path_to_module . '/assets/font-awesome.min.css');
+      drupal_add_js($path_to_module . '/assets/bootstrap.min.js');
+      drupal_add_js($path_to_module . '/assets/bootstrap-select.min.js');
+    }
+  }
+}
