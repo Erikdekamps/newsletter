@@ -14,10 +14,7 @@
           <td width="14" height="16"></td>
           <td width="16" height="16" bgcolor="#ffffff"></td>
           <td height="16" bgcolor="#ffffff">
-            <b
-              style="font-size: 16px; line-height: 23px; font-family: Arial, Helvetica, sans-serif; ">
-              <?php print isset($title) ? $title : ''; ?>
-            </b>
+            <b style="font-size: 16px; line-height: 23px; font-family: Arial, Helvetica, sans-serif; "><?php print $title; ?></b>
           </td>
           <td width="16" height="16" bgcolor="#ffffff"></td>
           <td width="14" height="16"></td>
@@ -30,25 +27,29 @@
           <td width="14"></td>
         </tr>
       <?php endif; ?>
+      <?php if (!empty($image)): ?>
       <tr>
         <td width="14" height="16"></td>
         <td width="16" height="16" bgcolor="#ffffff"></td>
         <td bgcolor="#ffffff">
-          <?php print isset($image) ? $image : ''; ?>
+          <?php print $image; ?>
         </td>
         <td width="16" height="16" bgcolor="#ffffff"></td>
         <td width="14" height="16"></td>
       </tr>
+      <?php endif; ?>
+      <?php if (!empty($text)): ?>
       <tr>
         <td width="14"></td>
         <td width="16" bgcolor="#ffffff"></td>
         <td bgcolor="#ffffff"
             style="color: #000001; font-size: 12px; line-height: 23px; font-family: Arial, Helvetica, sans-serif;">
-          <?php print isset($text) ? $text : ''; ?>
+          <?php print $text; ?>
         </td>
         <td width="16" bgcolor="#ffffff"></td>
         <td width="14"></td>
       </tr>
+      <?php endif; ?>
       <tr>
         <td width="14" height="16"></td>
         <td width="16" bgcolor="#ffffff"></td>
