@@ -44,7 +44,15 @@
         </td>
         <td width="16" bgcolor="#ffffff"></td>
         <td width="160" bgcolor="#ffffff">
-          <?php print isset($image) ? $image : ''; ?>
+          <?php if (!empty($image)): ?>
+            <?php print $image; ?>
+          <?php endif; ?>
+
+          <?php if (!empty($image_title)): ?>
+            <div style="text-align: right; margin-top: 5px; color: #000001; font-size: 12px; line-height: 23px; font-family: Arial, Helvetica, sans-serif;">
+              <?php print $image_title; ?>
+            </div>
+          <?php endif; ?>
         </td>
         <td width="16" bgcolor="#ffffff"></td>
         <td width="14"></td>
@@ -62,4 +70,6 @@
     </table>
   </td>
 </tr>
-<?php print isset($border) ? $border : ''; ?>
+<?php if (!empty($border)): ?>
+  <tr><td colspan="3" height="23"></td></tr>
+<?php endif; ?>

@@ -83,6 +83,16 @@ function newsletter_paragraphs_info() {
       'bundle' => 'image_middle',
       'locked' => '1',
     ),
+    'image_middle_above' => array(
+      'name' => 'Image middle above',
+      'bundle' => 'image_middle_above',
+      'locked' => '1',
+    ),
+    'image_middle_below' => array(
+      'name' => 'Image middle below',
+      'bundle' => 'image_middle_below',
+      'locked' => '1',
+    ),
     'image_right' => array(
       'name' => 'Image right',
       'bundle' => 'image_right',
