@@ -87,18 +87,22 @@ function newsletter_preprocess_paragraphs_item__image_left(&$variables) {
 
 function newsletter_preprocess_paragraphs_item__image_middle(&$variables) {
 
+  $title = $variables['field_shared_title'][0]['safe_value'];
+  $text = $variables['field_shared_text'][0]['safe_value'];
+  $image = $variables['field_shared_image'][0];
+
   // Check if the title is set.
-  if (isset($variables['field_shared_title'])) {
-    if (isset($variables['field_shared_title'][0]['safe_value'])) {
+  if (isset($title)) {
+    if (isset($title)) {
       // Set a new variable for the title.
-      $variables['title'] = newsletter_convert_special_characters($variables['field_shared_title'][0]['safe_value']);
+      $variables['title'] = newsletter_convert_special_characters($title);
     }
   }
 
   // Check if the image is set.
-  if (isset($variables['field_shared_image'])) {
+  if (isset($image)) {
     // Get the image uri.
-    $uri = $variables['field_shared_image'][0]['uri'];
+    $uri = $image['uri'];
     // Check the image uri.
     if (isset($uri) && !empty($uri)) {
       // Set a variable for the image.
@@ -111,13 +115,10 @@ function newsletter_preprocess_paragraphs_item__image_middle(&$variables) {
   }
 
   // Check if the text is set.
-  if (isset($variables['field_shared_text'][0]['safe_value'])) {
+  if (isset($text)) {
 
-    // Convert special characters.
-    $variables['text'] = newsletter_convert_special_characters($variables['field_shared_text'][0]['safe_value']);
-
-    // Change the anchors to become target blank.
-    $variables['text'] = newsletter_convert_links_to_target_blank($variables['text']);
+    // Store the variable.
+    $variables['text'] = _newsletter_reformat_text($text);
   }
 
   // Check if the border is set.
@@ -245,4 +246,41 @@ function newsletter_preprocess_paragraphs_item__two_images(&$variables) {
       $variables['border'] = '<tr><td colspan="3" height="23"></td></tr>';
     }
   }
+}
+
+/**
+ * Convert paragraphs to breaks.
+ *
+ * @param string $string
+ *   The string text to convert.
+ *
+ * @return mixed
+ *   Returns the converted text.
+ */
+function _newsletter_convert_paragraphs_to_breaks($string) {
+  $content = preg_replace("/<p[^>]*?>/", "", $string);
+  return str_replace("</p>", "<br />", $content);
+}
+
+/**
+ * Reformat text converting all kinds of stuff.
+ *
+ * @param string $text
+ *   The text to reformat.
+ * @return mixed
+ *   Returns the string of text.
+ */
+function _newsletter_reformat_text($text) {
+
+  // Convert special characters.
+  $text = newsletter_convert_special_characters($text);
+
+  // Convert the paragraphs to breaks.
+  $text = _newsletter_convert_paragraphs_to_breaks($text);
+
+  // Change the anchors to become target blank.
+  $text = newsletter_convert_links_to_target_blank($text);
+
+  // Return the text.
+  return $text;
 }
