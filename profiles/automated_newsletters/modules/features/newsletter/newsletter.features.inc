@@ -5,6 +5,47 @@
  */
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function newsletter_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: w250.
+  $styles['w250'] = array(
+    'label' => 'w250',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 250,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: w540.
+  $styles['w540'] = array(
+    'label' => 'w540',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 540,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function newsletter_node_info() {

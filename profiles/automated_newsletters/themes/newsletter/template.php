@@ -102,7 +102,10 @@ function newsletter_preprocess_paragraphs_item__image_middle(&$variables) {
     // Check the image uri.
     if (isset($uri) && !empty($uri)) {
       // Set a variable for the image.
-      $image = theme('image', array('path' => $uri)); // Todo - add image style for w540.
+      $image = theme('image_style', array(
+        'style_name' => 'w540',
+        'path' => $uri,
+      ));
       $variables['image'] = $image;
     }
   }
@@ -144,7 +147,10 @@ function newsletter_preprocess_paragraphs_item__image_right(&$variables) {
     // Check the image uri.
     if (isset($uri) && !empty($uri)) {
       // Set a variable for the image.
-      $image = theme('image', array('path' => $uri));
+      $image = theme('image_style', array(
+        'style_name' => 'w250',
+        'path' => $uri,
+      ));
       $variables['image'] = $image;
     }
   }
@@ -208,7 +214,10 @@ function newsletter_preprocess_paragraphs_item__two_images(&$variables) {
     // Check the image uri.
     if (isset($uri) && !empty($uri)) {
       // Set a variable for the image.
-      $image = theme('image', array('path' => $uri));
+      $image = theme('image_style', array(
+        'style_name' => 'w250',
+        'path' => $uri,
+      ));
       $variables['left_image'] = $image;
     }
   }
@@ -220,7 +229,10 @@ function newsletter_preprocess_paragraphs_item__two_images(&$variables) {
     // Check the image uri.
     if (isset($uri) && !empty($uri)) {
       // Set a variable for the image.
-      $image = theme('image', array('path' => $uri));
+      $image = theme('image_style', array(
+        'style_name' => 'w250',
+        'path' => $uri,
+      ));
       $variables['right_image'] = $image;
     }
   }
