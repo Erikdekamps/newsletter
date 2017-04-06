@@ -32,4 +32,6 @@
     </table>
   </td>
 </tr>
-<?php print isset($border) ? $border : ''; ?>
+<?php if (!empty($border)): ?>
+  <tr><td colspan="3" height="23"></td></tr>
+<?php endif; ?>

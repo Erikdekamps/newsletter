@@ -351,7 +351,7 @@ function newsletter_preprocess_paragraphs_item__two_images(&$variables) {
  */
 function _newsletter_convert_paragraphs_to_breaks($string) {
   $content = preg_replace("/<p[^>]*?>/", "", $string);
-  return str_replace("</p>", "<br />", $content);
+  return str_replace("</p>", "<br /><br />", $content);
 }
 
 /**
