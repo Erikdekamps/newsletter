@@ -1,65 +1,69 @@
 <tr>
   <td colspan="3">
+    <?php if (!empty($title)): ?>
+      <table width="600" align="center" cellpadding="0" cellspacing="0">
+        <tbody>
+        <tr>
+          <td width="14" height="16"></td>
+          <td width="16" bgcolor="#ffffff"></td>
+          <td bgcolor="#ffffff"></td>
+          <td width="16" bgcolor="#ffffff"></td>
+          <td width="14"></td>
+        </tr>
+        <tr>
+          <td width="14" height="16"></td>
+          <td width="16" height="16" bgcolor="#ffffff"></td>
+          <td height="16" bgcolor="#ffffff">
+            <b style="font-size: 16px; line-height: 23px; font-family: Arial, Helvetica, sans-serif; ">
+              <?php print $title; ?>
+            </b>
+          </td>
+          <td width="16" height="16" bgcolor="#ffffff"></td>
+          <td width="14" height="16"></td>
+        </tr>
+        <tr>
+          <td width="14" height="16"></td>
+          <td width="16" bgcolor="#ffffff"></td>
+          <td bgcolor="#ffffff"></td>
+          <td width="16" bgcolor="#ffffff"></td>
+          <td width="14"></td>
+        </tr>
+        </tbody>
+      </table>
+    <?php endif; ?>
     <table width="600" align="center" cellpadding="0" cellspacing="0">
       <tbody>
-      <?php if (isset($title) && !empty($title)): ?>
-      <tr>
-        <td width="14" height="12"></td>
-        <td width="16" bgcolor="#ffffff"></td>
-        <td width="160" bgcolor="#ffffff"></td>
-        <td width="16" bgcolor="#ffffff"></td>
-        <td bgcolor="#ffffff"></td>
-        <td width="16" bgcolor="#ffffff"></td>
-        <td width="14"></td>
-      </tr>
-      <?php endif; ?>
       <tr>
         <td width="14"></td>
         <td width="16" bgcolor="#ffffff"></td>
-        <td width="160" bgcolor="#ffffff" valign="top">
-          <?php print isset($image) ? $image : ''; ?>
-        </td>
+        <?php if (!empty($image)): ?>
+          <td width="160" bgcolor="#ffffff" valign="top">
+            <?php print $image; ?>
+          </td>
+        <?php endif; ?>
         <td width="16" bgcolor="#ffffff"></td>
         <td bgcolor="#ffffff" valign="top">
           <table align="center" cellpadding="0" cellspacing="0">
             <tbody>
-            <?php if (isset($title) && !empty($title)): ?>
+            <?php if (!empty($text)): ?>
               <tr>
-                <td height="4"></td>
-              </tr>
-              <tr>
-                <td>
-                  <b style="font-size: 16px; line-height: 26px; font-family: Arial, Helvetica, sans-serif; ">
-                    <?php print isset($title) ? $title : ''; ?>
-                  </b>
+                <td style="color: #000001; font-size: 12px; line-height: 23px; font-weight: normal; font-family: Arial, Helvetica, sans-serif;">
+                  <?php print $text; ?>
                 </td>
               </tr>
-              <tr>
-                <td height="5"></td>
-              </tr>
             <?php endif; ?>
-            <tr>
-              <td style="color: #000001; font-size: 12px; line-height: 23px; font-weight: normal; font-family: Arial, Helvetica, sans-serif;">
-                <?php print isset($text) ? $text : ''; ?>
-              </td>
-            </tr>
-            </tbody></table>
+            </tbody>
+          </table>
         </td>
         <td width="16" bgcolor="#ffffff"></td>
         <td width="14"></td>
       </tr>
-      <tr>
-        <td width="14" height="9"></td>
-        <td width="16" bgcolor="#ffffff"></td>
-        <td width="160" bgcolor="#ffffff"></td>
-        <td width="16" bgcolor="#ffffff"></td>
-        <td bgcolor="#ffffff"></td>
-        <td width="16" bgcolor="#ffffff"></td>
-        <td width="14"></td>
-      </tr>
-      </tbody></table>
+      </tbody>
+    </table>
   </td>
 </tr>
 <?php if (!empty($border)): ?>
-  <tr><td colspan="3" height="23"></td></tr>
+  <tr>
+    <td colspan="3" height="23"></td>
+  </tr>
 <?php endif; ?>
