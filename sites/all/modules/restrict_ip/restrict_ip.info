@@ -1,0 +1,11 @@
+name = Restrict IP
+description = Restricts access to the site to a list of user defined IP addresses
+core = 7.x
+
+configure = admin/config/people/restrict_ip
+; Information added by Drupal.org packaging script on 2017-04-11
+version = "7.x-2.1"
+core = "7.x"
+project = "restrict_ip"
+datestamp = "1491914647"
+
